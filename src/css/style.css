@@ -1,0 +1,411 @@
+/* The same style for all pages */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+}
+h1{
+    font-size:40px;
+    color: blue;
+}
+
+header{
+    background-color: rgba(247, 249, 252,0.5);
+    display: flex;
+    justify-content: space-between;   
+}
+
+
+.logo{
+    width: 60px;
+    height: 30px;
+    padding:3px;
+    margin:3px;
+}
+
+header nav ul{
+    display: none;
+}
+
+header button{
+    margin: 3px;
+    color:deepskyblue;
+    background-color: rgba(247, 249, 252,0.5);
+    border: none;
+}
+
+header nav button svg{
+    width: 20px;
+    height: 20px;
+}
+
+main{
+    padding:5px;
+}
+
+main section{
+    padding:6px;
+}
+main h2,footer h2{
+    color:cornflowerblue;
+}
+
+.social-media{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.social-media li svg{
+    width:20px;
+    height:20px;
+}
+footer{
+    background-color: rgba(247, 249, 252,0.5);
+    padding: 5px;
+}
+
+footer h2{
+    margin-top:0;
+}
+
+footer .logo{
+    display: block;
+    margin: auto;
+}
+
+.phone-email{
+    width: 300px;
+    margin: 20px auto 50px auto;
+}
+
+.phone-email div{
+    margin-bottom: 10px;
+}
+
+.phone-email svg{
+    width: 15px;
+    height: 15px;
+}
+
+
+footer div a:link{
+    color:blue;
+}
+
+footer div a:visited{
+    color:purple;
+}
+
+footer div a:hover{
+    color:#dd1f29;
+}
+
+footer div a:focus{
+    background-color: #115cfa;
+    color: white;
+}
+
+footer div a:active{
+    color:cornflowerblue;
+}
+
+
+footer button{
+    display: block;
+    background-color: #115cfa;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 15px;
+    color: white;
+}
+
+footer button:hover{
+    background-color: #dd1f29;
+}
+
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgb(156, 163, 175) 0px 10px 15px -3px, rgb(156, 163, 175) 0px 4px 6px -4px;
+    border-radius: 11px;
+    margin-left: 10px;
+}
+
+
+
+
+
+/* Style for Home Page */
+
+
+
+.intro span{
+    color:rgb(65, 143, 232);
+}
+
+.intro img{
+    width: 100%;
+}
+
+#about,.intro,.skills{
+    margin-bottom: 60px;
+}
+
+.intro h1{
+    color:black;
+}
+
+
+#about div{
+    margin: 30px 50px;
+    padding: 7px;
+   
+}
+
+#about div img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.skills{
+    margin-top: 130px;
+}
+
+
+.skills img{
+    width:30px;
+    height: 30px;
+    margin-right: 20px;
+} 
+
+
+.skills ul li figure{
+    display: flex;
+    margin:20px 15px;
+   
+}
+
+.skills ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 20px 20px;
+}
+
+.skills ul li{
+    width: 45%
+}
+
+
+/* STYLE FOR WORKS PAGE */
+
+.projects img{
+    display: block;
+    width: 100%;
+    margin:0 auto 25px auto;
+    border-radius: 5px;
+
+}
+
+.projects h1{
+    margin:0;
+}
+
+.web-p h2,.mobile-p h2{
+    font-size: 30px;
+}
+
+
+.web-p div,.mobile-p div{
+    margin-bottom: 80px;
+    padding: 6px;
+    border-bottom: 1px grey solid;
+  
+}
+
+.web-p,.mobile-p{
+    display:flex;
+    flex-direction: column;
+}
+
+.web-p h3, .mobile-p h3{
+    margin-bottom: 0;
+    color:rgb(139, 192, 252);
+    text-align: center;
+}
+
+.web-p p,.mobile-p p{
+    margin-top:5px;
+}
+
+
+
+/* STYLE FOR BLOG PAGE */
+
+
+.blog section{
+    margin-bottom: 90px;
+}
+
+.blog h1{
+    margin-bottom: 8px;
+}
+
+
+.blog ol{
+    list-style:none;
+}
+
+.blog ol li{
+    color:gray
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider-wrapper .slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 0.5rem;
+}
+.slider img,.slider iframe{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 1.25rem;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity:0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+/* STYLE FOR EDUCATION PAGE */
+
+.resume section{
+    margin: 50px 0;
+}
+
+
+table,th,td{
+    border: 1px deepskyblue solid;
+    border-collapse: collapse;
+}
+table{
+    margin: auto;
+}
+
+th,td{
+    padding:5px;
+}
+
+/* STYLE FOR CONTACTS PAGE */
+
+main section .message{
+    width:50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+.contact h2{
+    text-align: center;
+}
+
+.contact section{
+    margin: 50px 0;
+}
+
+main button{
+    display: block;
+    background-color: #115cfa;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 8px;
+    color: white;
+}
+
+main button:hover{
+    background-color: #dd1f29;
+}
+
+form{
+    margin:25px 0;
+    padding: 20px 10px;
+}
+form div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    gap: 5px;
+    row-gap: 10px;
+    margin: 5px;
+}
+form div input{
+    width: 150px;
+}
+form input{
+
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding:3px;
+}
+
+
+form label.textbox{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 25px;
+    color:cornflowerblue;
+}
+
+form textarea{
+    border-radius: 5px;
+    display: block;
+    width: 80%;
+    margin:auto;
+}
+
+.contact-info h3{
+    display:inline;
+    margin: 10px 10px;
+}
