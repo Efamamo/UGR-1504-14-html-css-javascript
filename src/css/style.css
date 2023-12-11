@@ -7,6 +7,14 @@ body{
     margin: 0;
 }
 
+main{
+    padding:10px;
+}
+
+main section{
+    padding:6px;
+}
+
 h1,h2{
     text-align: center;
 }
@@ -14,49 +22,44 @@ h1,h2{
 h2{
     font-size: 30px;
 }
+
 h1{
-    font-size:40px;
-    color: blue;
+    font-size: 40px;
+    color:cornflowerblue;;
 }
 
-header{
+.header{
     background-color: rgba(247, 249, 252,0.5);
     display: flex;
     justify-content: space-between;   
 }
 
 
-.logo{
+.header__img,.footer__img{
     width: 60px;
     height: 30px;
     padding:3px;
     margin:3px;
 }
 
-header nav ul{
+.header__ul{
     display: none;
 }
 
-header button{
+.header__btn{
     margin: 3px;
     color:deepskyblue;
     background-color: rgba(247, 249, 252,0.5);
     border: none;
 }
 
-header nav button svg{
+.header__menu{
     width: 20px;
     height: 20px;
 }
 
-main{
-    padding:5px;
-}
 
-main section{
-    padding:6px;
-}
-main h2,footer h2{
+h2{
     color:cornflowerblue;
 }
 
@@ -68,62 +71,68 @@ main h2,footer h2{
     padding: 0 50px;
 }
 
-.social-media li svg{
+.social-media__li{
+    transition: 0.5s ease;;
+}
+
+.social-media__li:hover{
+    transform: scale(1.2);
+}
+
+.social-media__svg{
     width:20px;
     height:20px;
 }
-footer{
+
+.footer{
     background-color: rgba(247, 249, 252,0.5);
     padding: 5px;
 }
 
-footer h2{
+.footer__h2{
     margin-top:0;
 }
 
-footer .logo{
+.footer__img{
     display: block;
     margin: auto;
 }
 
-.phone-email{
+.footer__phone-email-container{
     width: 300px;
     margin: 20px auto 50px auto;
 }
 
-.phone-email div{
+.footer__phone-email{
     margin-bottom: 10px;
 }
 
-.phone-email svg{
+.footer__svg{
     width: 15px;
     height: 15px;
 }
 
 
-footer div a:link{
+.footer__a:link,.footer__a:visited{
     color:blue;
 }
 
-footer div a:visited{
-    color:purple;
-}
 
-footer div a:hover{
+.footer__a:hover{
     color:#dd1f29;
 }
 
-footer div a:focus{
+.footer__a:focus{
     background-color: #115cfa;
     color: white;
 }
 
-footer div a:active{
+.footer__a:active{
     color:cornflowerblue;
 }
 
 
-footer button{
+.btn{
     display: block;
     background-color: #115cfa;
     border: 1px solid gray;
@@ -134,9 +143,10 @@ footer button{
     color: white;
 }
 
-footer button:hover{
+.btn:hover{
     background-color: #dd1f29;
 }
+
 
 .shadow{
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
@@ -153,67 +163,72 @@ footer button:hover{
 
 
 
-.intro span{
+.intro__name{
     color:rgb(65, 143, 232);
 }
 
-.intro img{
-    width: 100%;
+.intro__img{
+    width: 99%;
+    margin:auto;
 }
 
-#about,.intro,.skills{
+.about,.intro,.skills{
     margin-bottom: 60px;
 }
 
-.intro h1{
+.intro__h1{
     color:black;
 }
 
-
-#about div{
-    margin: 30px 50px;
+.about__second-container{
+    text-align: center;
+}
+.about__container{
     padding: 7px;
    
 }
 
-#about div img{
-    width: 100%;
+.about__img{
+    max-width: 300px;
     border-radius: 5px;
 }
+
 
 .skills{
     margin-top: 130px;
 }
 
 
-.skills img{
+.skills__img{
     width:30px;
     height: 30px;
     margin-right: 20px;
 } 
 
 
-.skills ul li figure{
+.skills__figure{
     display: flex;
-    margin:20px 15px;
+    margin:15px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
    
 }
 
-.skills ul{
+.skills__ul{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     padding: 20px 20px;
 }
 
-.skills ul li{
+.skills__li{
     width: 45%
 }
 
 
 /* STYLE FOR WORKS PAGE */
 
-.projects img{
+.projects__img{
     display: block;
     width: 100%;
     margin:0 auto 25px auto;
@@ -221,34 +236,30 @@ footer button:hover{
 
 }
 
-.projects h1{
+.projects__h1{
     margin:0;
 }
 
-.web-p h2,.mobile-p h2{
-    font-size: 30px;
-}
 
-
-.web-p div,.mobile-p div{
+.projects__outer-container{
     margin-bottom: 80px;
     padding: 6px;
     border-bottom: 1px grey solid;
   
 }
 
-.web-p,.mobile-p{
+.projects__web-p,.projects__mobile-p{
     display:flex;
     flex-direction: column;
 }
 
-.web-p h3, .mobile-p h3{
+.projects__h3{
     margin-bottom: 0;
     color:rgb(139, 192, 252);
     text-align: center;
 }
 
-.web-p p,.mobile-p p{
+.projects__p{
     margin-top:5px;
 }
 
@@ -257,43 +268,49 @@ footer button:hover{
 /* STYLE FOR BLOG PAGE */
 
 
-.blog section{
+.blog__card{
     margin-bottom: 90px;
 }
 
-.blog h1{
+.blog__h1{
     margin-bottom: 8px;
 }
 
 
-.blog ol{
+.blog__ol{
     list-style:none;
 }
 
-.blog ol li{
+.blog__li{
     color:gray
 }
 
-.slider-wrapper{
+.blog__slider-wrapper{
     position: relative;
     max-width: 48rem;
     margin: 0 auto;
 }
 
-.slider-wrapper .slider{
+.blog__slider{
     display: flex;
     aspect-ratio: 16/9;
     overflow-x: auto; 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     border-radius: 0.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-.slider img,.slider iframe{
+
+.blog__slider::-webkit-scrollbar{
+    display: none;
+}
+.blog__img{
     flex: 1 0 100%;
     scroll-snap-align: start;
 }
 
-.slider-nav{
+.blog__nav{
     display: flex;
     column-gap: 1rem;
     position: absolute;
@@ -303,7 +320,7 @@ footer button:hover{
     z-index: 1;
 }
 
-.slider-nav a{
+.blog__a{
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
@@ -312,66 +329,54 @@ footer button:hover{
     transition: opacity ease 250ms;
 }
 
-.slider-nav a:hover{
+.blog__a:hover{
     opacity: 1;
 }
 
 /* STYLE FOR EDUCATION PAGE */
 
-.resume section{
+.resume__card{
     margin: 50px 0;
+    max-width: 700px;
 }
 
 
-table,th,td{
+.resume__table,.resume__th,.resume__td{
     border: 1px deepskyblue solid;
     border-collapse: collapse;
 }
-table{
+.resume__table{
     margin: auto;
 }
 
-th,td{
+.resume__th,.resume__td{
     padding:5px;
 }
 
+
+
 /* STYLE FOR CONTACTS PAGE */
 
-main section .message{
+.contact-secton1__img{
     width:50px;
     height: 50px;
     display: block;
     margin: auto;
 }
 
-.contact h2{
+.contact-section1_h2{
     text-align: center;
 }
 
-.contact section{
+.contact-section{
     margin: 50px 0;
 }
 
-main button{
-    display: block;
-    background-color: #115cfa;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 5px;
-    margin: auto;
-    margin-top: 8px;
-    color: white;
-}
-
-main button:hover{
-    background-color: #dd1f29;
-}
-
-form{
+.contact-section2__form{
     margin:25px 0;
     padding: 20px 10px;
 }
-form div{
+.content-sectin2__container{
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
@@ -379,10 +384,12 @@ form div{
     row-gap: 10px;
     margin: 5px;
 }
-form div input{
+
+.contact-section2__input{
     width: 150px;
 }
-form input{
+
+.contact-section2__checkox{
 
     border: 1px solid grey;
     border-radius: 5px;
@@ -390,7 +397,7 @@ form input{
 }
 
 
-form label.textbox{
+.contact-section2__label{
     display: block;
     margin-top: 10px;
     text-align: center;
@@ -398,14 +405,507 @@ form label.textbox{
     color:cornflowerblue;
 }
 
-form textarea{
+.contact-section2__textarea{
     border-radius: 5px;
     display: block;
     width: 80%;
     margin:auto;
 }
 
-.contact-info h3{
+.contact__h3{
     display:inline;
     margin: 10px 10px;
 }
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY FOR TABLETS, MOBILE LANSCAPE AND LARGER SMART PHONES */
+
+@media screen and (min-width:481px) {
+
+
+    /* GENERAL STYLING */
+
+    
+
+    .footer{
+        text-align: left;
+    }
+
+    .footer__img{
+        margin-left:5px;
+    }
+
+
+    .footer__outer{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+
+    .footer__ul{
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0;
+        justify-content: space-around;
+        column-gap: 5px;
+        row-gap: 5px;   
+    }
+
+    .footer__li{
+        width:45%;
+    }
+
+    .footer__btn-container{
+        width:100%;
+    }
+
+
+
+    /*HOME PAGE */
+
+    .intro__outer-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 50px 5px;
+    }
+
+    .intro__inner-container{
+        width:70%;
+        padding: 5px;
+    }
+    
+    .intro__social-media{
+        display: flex;
+        flex-flow: column wrap;
+        padding:0;
+        justify-content: space-around;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+
+    .skills{
+        text-align: center;
+        padding:5px;
+    }
+
+    .skills__ul{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills__li{
+        width: 30%;
+    }
+
+
+
+
+    /* WORKS PAGE */
+    
+
+    .projects__outer-container{
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+    }
+
+    .projects__inner-containe{
+        margin-top: 75px;
+    }
+    
+
+    .projects__outer-container, .projects__inner-container{
+        border-bottom: none;
+        width:100%;
+        
+    }
+    .projects__p{
+        width:100%;
+        padding:5px;
+    }
+
+
+
+
+
+
+    /*BLOG PAGE */
+
+    .blog{
+        padding:10px;
+    }
+
+    .blog__slider-wrapper{
+        margin-top: 50px;
+        width:80%;
+        padding: 5px;
+    }
+
+    .blog_ol,.blog__hobbies{
+        text-align: center;
+    }
+
+    .blog__li{
+        font-size: 20px;
+    }
+
+
+
+
+
+    /*EDUCATION PAGE */
+
+    .resume{
+        width: 80%;
+        margin: 10px auto;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        padding:10px;
+    }
+
+    .resume__card{
+        height: auto;
+        margin: 40px auto 120px auto;
+        padding:10px;
+    }
+    
+
+    .resume__table{
+        width: 90%;
+        padding: 3px;
+    }
+
+    .resume__btn{
+        position: relative;
+        bottom: 30px;
+    }
+    
+ 
+
+    /*CONTACT PAGE */
+
+    .contact-section2__input{
+        width:45%;
+        padding:8px;
+    }
+        
+    }
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY FOR  LAPTOPS AND LARGER TABLETS IN LANDSCAPE AND SMALL DESKTOPS */
+
+@media screen and (min-width:769px) {
+
+
+
+    /* GENERAL STYLING */
+
+
+    .header__ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        padding-right: 50px;
+    }
+
+    .header__li{
+        padding: 1px 5px;
+        margin: 2px;
+        transition: 0.3s ease;   
+    }
+
+    .header__li:hover{
+        transform: scale(1.1);
+    }
+
+    .header__link:link , .header__link:visited{
+        text-decoration: none;
+        padding:7px;
+        color: black;
+    } 
+
+    .header__link:hover{
+        color:cornflowerblue;
+        background-color: white;     
+    }
+
+    .header__link:active{
+        color:blue;
+        background-color: white;
+        
+    }
+
+    .header__btn{
+        display: none;
+    }
+
+    .footer__btn-container{
+        width:30%;
+    }
+
+
+
+
+
+    /*HOME PAGE */
+
+    .intro__img{
+        border-radius: 8px;
+        
+    }
+
+
+    .intro__outer-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 100px 5px;
+        padding: 5px;   
+    }
+
+    .intro__social-media{
+        display: flex;
+        flex-flow: row wrap;
+        padding-left:15px;
+        margin-top: 75px;
+        justify-content: space-around;
+        column-gap: 8px;
+        row-gap: 8px;
+        justify-content: space-between;
+    }
+
+    .intro__li{
+        width: 45%;
+    }
+
+    .about{
+        display: flex;
+        align-items: start;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .about__second-container{
+        order: -1;
+        text-align: center;
+    }
+    
+    .about__container{
+        width: 50%;
+        padding: 0;
+    }
+
+    .skills__figure{
+        column-gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills__ul{
+        row-gap: 10px; 
+        padding: 5px;  
+    }
+
+    .skills__li{
+        width: 23%;
+    }
+
+
+ 
+    
+    /* BLOG PAGE */
+
+    .blog{
+        text-align: center;
+        padding:20px;
+        max-width: 1200px;
+        margin: auto;
+        }
+
+    .blog__card{
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+        margin: 50px 0 200px 0;
+        justify-content: space-around;
+    }
+    
+    .blog__card div{
+        text-align: left;
+    }
+
+    .blog__slider-wrapper{
+        width:45%;
+        margin-top: 0;    
+    }
+
+    .blog__p{
+        width:100%;
+        margin: 50px auto;
+    }
+    
+    .blog__ol{
+        margin-bottom: 200px;
+    }
+
+    .blog__li{
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .blog__left{
+        order:-1;
+    }
+    
+    .blog__videos{
+        display: flex;
+        column-gap: 30px;
+        justify-content: space-between;
+    }
+
+    .blog__videocard{
+        flex-direction: column;
+        justify-content: start;
+        width: 50%;
+    }
+
+    .video__slider-wrapper{
+        width:75%;
+        padding: 5px;
+    }
+
+
+
+
+
+    /*WORK PAGE */
+
+
+    .projects__web-p,.projects__mobile-p{
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+       
+    }
+
+    .projects__outer-container{
+        
+        width:75%;
+        flex-direction: column;
+        margin-top: 3px;
+        transition: ease 0.7s;
+        
+    }
+
+
+    .projects__inner-container{
+        margin-top:0;
+        width:75%;
+    }
+    
+
+    .projects__outer-container:hover{
+        transform: scale(1.05);
+    }
+
+
+
+    /*  CONTACT PAGE */
+
+
+    .contact{
+        max-width: 1200px;
+        margin:auto;
+    }
+    .contact-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-section{
+        width:45%
+    }
+
+
+    .more{
+        width:50%;
+        position: relative;
+        left: 50%;
+        padding:8px;
+    }
+
+
+    .contact-section2__input{
+        width:45%;
+        padding:8px;
+    }
+
+
+    .footer__outerv{
+        justify-content: space-around;
+        padding: 10px;
+        align-items: center;
+    }
+
+    /* FOR EDUCATION PAGE ALL OF THE WIDTHES ARE RESPONSIVE BECAUSE THEY ARE GIVEN MAX-WIDTH PROPERTY */
+}   
+
+
+
+
+
+
+/* MEDIA QUERIE FOR BIGGER DESKTOPS */
+
+@media screen and (min-width:1280px) {
+
+
+    /* HOME PAGE RESPONSIVE FOR BIGGER DESKTOPS AND MONITORS */
+
+   main{
+    width:90%;
+    margin: auto;
+   }
+    .intro__outer-container{
+        margin: 200px 5px;
+        padding: 10px;
+    }
+
+    .skills__li{
+        width: 20%;
+    }
+
+    .projects__outer-container{
+        display: block;
+    }  
+
+    .projects__inner-container{
+        width: 100%;
+    }
+    
+    .projects__web-p,.projects__mobile-p{
+        column-gap: 30px;
+    }
+
+}
+
+
