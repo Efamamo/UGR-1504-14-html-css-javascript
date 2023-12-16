@@ -238,6 +238,13 @@ h2{
     color: white;
 }
 
+a.btn{
+    display: block;
+    text-decoration: none;
+    width:120px;
+    text-align: center;
+}
+
 .btn:hover{
     background-color: #dd1f29;
 }
