@@ -845,7 +845,7 @@ a.btn:not(.phone){
 
     .about{
         display: flex;
-        align-items: start;
+        align-items: center;
         margin: 5px;
         padding: 5px;
     }
