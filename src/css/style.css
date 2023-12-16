@@ -238,7 +238,7 @@ h2{
     color: white;
 }
 
-a.btn{
+a.btn:not(.phone){
     display: block;
     text-decoration: none;
     width:120px;
