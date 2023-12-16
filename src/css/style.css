@@ -30,7 +30,7 @@ h1{
 }
 section{
     opacity: 0;
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .show{

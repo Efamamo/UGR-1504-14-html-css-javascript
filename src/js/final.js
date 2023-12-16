@@ -24,22 +24,8 @@ document.addEventListener("scroll", function(){
 })
 
 
-// Smooth scroll to about page
 
-function smoothScroll() {
-    var targetElement = document.getElementById("about");
-
-    if (targetElement) {
-        // Scroll to the target element smoothly
-        targetElement.scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-}
-
-document.querySelector("li.close").onclick = smoothScroll();
-
-
+// Elements appear when we get to them scrolling
 
 
 const observer = new IntersectionObserver((entries)=>{
