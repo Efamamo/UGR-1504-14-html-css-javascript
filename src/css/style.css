@@ -9,6 +9,7 @@ body{
 
 main{
     padding:10px;
+    position: relative;
 }
 
 main section{
@@ -32,7 +33,17 @@ h1{
     background-color: rgba(247, 249, 252,0.5);
     display: flex;
     justify-content: space-between;   
+    position: fixed;
+    z-index: 900;
+    width:100%;
+    transition: 0.6s;
+    
 }
+
+.sticky{
+    background-color: white;
+}
+
 
 
 .header__img,.footer__img{
@@ -44,6 +55,82 @@ h1{
 
 .header__ul{
     display: none;
+}
+
+
+.header__sidebar{
+    list-style: none;
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    width:100%;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgb(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    row-gap: 10px;
+    margin-top: 0;
+
+
+}
+
+.header__ul .header__img{
+    margin:30px 0 100px;
+}
+
+.cancel{
+    width:24px;
+    height: 24px;
+}
+
+.sidebar__li{
+    width: 100px;
+    text-align: center;
+    padding: 1px 5px;
+    margin: 2px;
+    transition: 1s ease;
+}
+
+.sidebar__li:hover{
+    transform: scale(1.1);
+}
+
+.sidebar__li a{
+    width:100%;
+    text-decoration: none;
+}
+
+
+.sdebar__li a:link , .sidebar__li a:visited{
+    text-decoration: none;
+    padding:7px;
+    color: black;
+} 
+
+.sidebar__li a:hover{
+    color:cornflowerblue;
+    background-color: white;     
+}
+
+.sidebar__li:hover{
+    background-color: white; 
+}
+
+.sidebar__li a:active{
+    color:blue;
+    background-color: white;
+    
+}
+
+#x{
+    position: absolute;
+    top:8px;
+    right: 8px;
 }
 
 .header__btn{
@@ -236,9 +323,7 @@ h2{
 
 }
 
-.projects__h1{
-    margin:0;
-}
+
 
 
 .projects__outer-container{
@@ -263,6 +348,23 @@ h2{
     margin-top:5px;
 }
 
+
+.projects__technologiesused{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.technologies__ul{
+    list-style: none;
+}
+
+.technologies__li{
+    font-weight: bold;
+    color:lightblue;
+}
 
 
 /* STYLE FOR BLOG PAGE */
@@ -598,6 +700,29 @@ h2{
         width:45%;
         padding:8px;
     }
+
+    .contact-section11{
+        display: flex;
+    }
+
+    .contact-section11 div{
+        width:70%;
+    }
+
+    .contact-section11 .social-media{
+        display: flex;
+        padding: 0;
+        width:30%;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+
+    }
+
+    .contact-section11 li{
+        width: 35%;
+        row-gap: 10px;
+    }
         
     }
 
@@ -636,6 +761,8 @@ h2{
         transform: scale(1.1);
     }
 
+
+
     .header__link:link , .header__link:visited{
         text-decoration: none;
         padding:7px;
@@ -644,13 +771,18 @@ h2{
 
     .header__link:hover{
         color:cornflowerblue;
-        background-color: white;     
+        background-color: white; 
+        border-bottom: 2px solid #115cfa;    
     }
 
     .header__link:active{
         color:blue;
         background-color: white;
         
+    }
+
+    .header__sidebar{
+        display: none !important;
     }
 
     .header__btn{
@@ -826,6 +958,9 @@ h2{
         transform: scale(1.05);
     }
 
+    .projects__technologiesused{
+        flex-direction: row;
+    }
 
 
     /*  CONTACT PAGE */
@@ -843,6 +978,29 @@ h2{
 
     .contact-section{
         width:45%
+    }
+
+    .contact-section11{
+        flex-direction: column;
+    }
+
+
+    .contact-section11 div{
+        text-align: center;
+        width: 100%;
+    }
+    .contact-section11 .social-media{
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+
+    }
+
+
+    .contact-section11 li{
+        width:20%;
+        row-gap: 0;
     }
 
 
@@ -881,10 +1039,7 @@ h2{
 
     /* HOME PAGE RESPONSIVE FOR BIGGER DESKTOPS AND MONITORS */
 
-   main{
-    width:90%;
-    margin: auto;
-   }
+
     .intro__outer-container{
         margin: 200px 5px;
         padding: 10px;
